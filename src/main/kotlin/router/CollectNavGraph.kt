@@ -14,6 +14,7 @@ import androidx.compose.ui.graphics.Color
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.transition.NavTransition
+import ui.collect.view.CollectRightView
 
 @Composable
 fun CollectNavGraph(navigator: Navigator) {
@@ -55,9 +56,7 @@ fun CollectNavGraph(navigator: Navigator) {
             }
         }
         scene(RouterUrls.CONTACT_ALL) {
-            Column(modifier = Modifier.fillMaxHeight().fillMaxWidth().background(Color.White)) {
-                Text("所有")
-            }
+            CollectRightView()
         }
     }
 }

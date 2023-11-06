@@ -1,5 +1,6 @@
 package model.wanAndroid
 
+import model.wanAndroid.data.ArticleListInfo
 import model.wanAndroid.data.BannerInfo
 import model.wanAndroid.data.BasicBean
 import network.ServiceCreator
@@ -11,5 +12,9 @@ object WanAndroidNetwork {
 
     suspend fun getBannerInfo(): BasicBean<ArrayList<BannerInfo>> {
         return wanAndroidService.getBanner()
+    }
+
+    suspend fun getArticleInfo(): BasicBean<ArticleListInfo> {
+        return wanAndroidService.getArticle()
     }
 }
